@@ -3,19 +3,12 @@
         <div class="nav-wrapper">
             <div class="navbar-left">
                 <a href="#" @click.prevent="$emit('click')">
-                    <i class="material-icons black-text">Скрыть боковое меню</i>
+                    <i class="material-icons black-text">Vueниверситет</i>
                 </a>
-
             </div>
-
-
-
-
-                            <a href="#" class="black-text" @click.prevent="$router.push('/')">
-                                Выйти
-                            </a>
-
-
+            <a href="#" class="black-text" @click.prevent="$router.push('/')">
+                Выйти
+            </a>
         </div>
     </nav>
 </template>

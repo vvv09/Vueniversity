@@ -5,7 +5,7 @@
         <span class="card-title"><b>Vue</b>ниверситет</span>
 
           <button class="btn waves-effect waves-light auth-submit" @click="$router.push('/subjects')">
-            Войти <i class="material-icons right">send</i>
+            Войти
           </button>
       </div>
     </div>

@@ -15,25 +15,25 @@ const routes = [
     path: '/classrooms',
     name: 'classrooms',
     meta: {layout: 'main'},
-    component: () => import('../views/ClassroomList.vue')
+    component: () => import('../views/Classrooms.vue')
   },
   {
     path: '/groups',
     name: 'groups',
     meta: {layout: 'main'},
-    component: () => import('../views/GroupList.vue')
+    component: () => import('../views/Groups.vue')
   },
   {
     path: '/subjects',
     name: 'subjects',
     meta: {layout: 'main'},
-    component: () => import('../views/SubjectList.vue')
+    component: () => import('../views/Subjects.vue')
   },
   {
     path: '/students',
     name: 'students',
     meta: {layout: 'main'},
-    component: () => import('../views/StudentList.vue')
+    component: () => import('../views/Students.vue')
   },
   {
     path: '/schedule',
@@ -45,7 +45,7 @@ const routes = [
     path: '/teachers',
     name: 'teachers',
     meta: {layout: 'main'},
-    component: () => import('../views/TeacherList.vue')
+    component: () => import('../views/Teachers.vue')
   }
 ]
 
