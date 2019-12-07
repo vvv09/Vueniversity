@@ -1,21 +1,29 @@
 <template>
     <div>
         <h4>Предметы</h4>
-        <SubjectList />
+        <SubjectTable />
+        <button class="btn btn-small" id="crateBtn" @click="create">Create</button>
     </div>
 </template>
 
 <script>
-    import SubjectList from '@/components/SubjectList'
+    import SubjectTable from '@/components/SubjectTable'
 
     export default {
         name: "Subjects",
         components: {
-            SubjectList
+            SubjectTable
+        },
+        methods: {
+            create(){
+                console.log("creating")
+            }
         }
     }
 </script>
 
 <style scoped>
-
+    #crateBtn {
+        margin-top: 1vh;
+    }
 </style>

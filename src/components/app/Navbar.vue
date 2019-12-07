@@ -3,11 +3,16 @@
         <div class="nav-wrapper">
             <div class="navbar-left">
                 <a href="#" @click.prevent="$emit('click')">
-                    <i class="material-icons black-text">Vueниверситет</i>
+                    <i class="material-icons black-text">меню</i>
                 </a>
             </div>
+            <div id="logo">
+
+                    <em>Vue</em>ниверситет
+
+            </div>
             <a href="#" class="black-text" @click.prevent="$router.push('/')">
-                Выйти
+                <i class="material-icons black-text">выйти</i>
             </a>
         </div>
     </nav>
@@ -23,5 +28,11 @@
 </script>
 
 <style scoped>
-
+    #logo {
+        color: black;
+        font-size: 70px;
+    }
+    #logo em {
+        color: green;
+    }
 </style>
