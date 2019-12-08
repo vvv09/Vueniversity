@@ -18,7 +18,7 @@
 
 <script>
     import ItemRow from "@/components/ItemRow"
-    import GroupService from "@/services/groupService"
+    import ItemService from "@/services/groupService"
 
     export default {
         name: "GroupTable",
@@ -32,16 +32,19 @@
         },
         methods: {
             refreshList() {
-                GroupService.retrieveAll()
+                ItemService.retrieveAll()
                     .then((response) => {
                         this.groups = response.data;
                     });
             },
-            updateItem() {
-                console.log("updating")
+            updateItem(id) {
+                this.$router.push(`/groups/${id}`)
             },
-            deleteItem() {
-                console.log("deleting")
+            deleteItem(id) {
+                ItemService.deleteItem(id)
+                    .then(() => {
+                        this.refreshList()
+                    })
             }
         },
         created() {

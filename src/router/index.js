@@ -18,10 +18,22 @@ const routes = [
     component: () => import('../views/Classrooms.vue')
   },
   {
+    path: '/classrooms/:id',
+    name: 'classroom',
+    meta: {layout: 'main'},
+    component: () => import('../views/Classroom.vue')
+  },
+  {
     path: '/groups',
     name: 'groups',
     meta: {layout: 'main'},
     component: () => import('../views/Groups.vue')
+  },
+  {
+    path: '/groups/:id',
+    name: 'group',
+    meta: {layout: 'main'},
+    component: () => import('../views/Group.vue')
   },
   {
     path: '/subjects',
@@ -30,10 +42,22 @@ const routes = [
     component: () => import('../views/Subjects.vue')
   },
   {
+    path: '/subjects/:id',
+    name: 'subject',
+    meta: {layout: 'main'},
+    component: () => import('../views/Subject.vue')
+  },
+  {
     path: '/students',
     name: 'students',
     meta: {layout: 'main'},
     component: () => import('../views/Students.vue')
+  },
+  {
+    path: '/students/:id',
+    name: 'student',
+    meta: {layout: 'main'},
+    component: () => import('../views/Student.vue')
   },
   {
     path: '/schedule',
@@ -46,6 +70,12 @@ const routes = [
     name: 'teachers',
     meta: {layout: 'main'},
     component: () => import('../views/Teachers.vue')
+  },
+  {
+    path: '/teachers/:id',
+    name: 'teacher',
+    meta: {layout: 'main'},
+    component: () => import('../views/Teacher.vue')
   }
 ]
 

@@ -31,7 +31,7 @@
 
 <script>
     import ScheduleRow from "@/components/ScheduleRow"
-    import ScheduleService from "@/services/scheduleService"
+    import ItemService from "@/services/scheduleService"
 
     export default {
         name: "ScheduleTable",
@@ -45,7 +45,7 @@
         },
         methods: {
             refreshList() {
-                ScheduleService.retrieveAll()
+                ItemService.retrieveAll()
                     .then((response) => {
                         this.schedule = response.data;
                     });

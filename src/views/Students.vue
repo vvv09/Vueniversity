@@ -16,7 +16,7 @@
         },
         methods: {
             create(){
-                console.log("creating")
+                this.$router.push(`/students/-1`);
             }
         }
     }

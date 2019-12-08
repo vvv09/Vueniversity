@@ -9,25 +9,21 @@ class SubjectService {
         return axios.get(`${SUBJECT_API_URL}`);
     }
 
-    // retrieveCourse(name, id) {
-    //     //console.log('executed service')
-    //     return axios.get(`${INSTRUCTOR_API_URL}/courses/${id}`);
-    // }
-    //
-    // deleteCourse(name, id) {
-    //     //console.log('executed service')
-    //     return axios.delete(`${INSTRUCTOR_API_URL}/courses/${id}`);
-    // }
-    //
-    // updateCourse(name, id, course) {
-    //     //console.log('executed service')
-    //     return axios.put(`${INSTRUCTOR_API_URL}/courses/${id}`, course);
-    // }
-    //
-    // createCourse(name, course) {
-    //     //console.log('executed service')
-    //     return axios.post(`${INSTRUCTOR_API_URL}/courses/`, course);
-    // }
+    retrieveItem(id) {
+        return axios.get(`${SUBJECT_API_URL}/${id}`);
+    }
+
+    deleteItem(id) {
+        return axios.delete(`${SUBJECT_API_URL}/${id}`);
+    }
+
+    updateItem(id, item) {
+        return axios.put(`${SUBJECT_API_URL}/${id}`, item);
+    }
+
+    createItem(name) {
+        return axios.post(`${SUBJECT_API_URL}`, name);
+    }
 }
 
 export default new SubjectService()

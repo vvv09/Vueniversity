@@ -18,7 +18,7 @@
 
 <script>
     import ItemRow from "@/components/ItemRow"
-    import StudentService from "@/services/studentService"
+    import ItemService from "@/services/studentService"
 
     export default {
         name: "StudentTable",
@@ -32,16 +32,19 @@
         },
         methods: {
             refreshList() {
-                StudentService.retrieveAll()
+                ItemService.retrieveAll()
                     .then((response) => {
                         this.students = response.data;
                     });
             },
-            updateItem() {
-                console.log("updating")
+            updateItem(id) {
+                this.$router.push(`/students/${id}`)
             },
-            deleteItem() {
-                console.log("deleting")
+            deleteItem(id) {
+                ItemService.deleteItem(id)
+                    .then(() => {
+                        this.refreshList()
+                    })
             }
         },
         created() {

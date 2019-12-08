@@ -9,6 +9,22 @@ class ClassroomService {
         return axios.get(`${SUBJECT_API_URL}`);
     }
 
+    retrieveItem(id) {
+        return axios.get(`${SUBJECT_API_URL}/${id}`);
+    }
+
+    deleteItem(id) {
+        return axios.delete(`${SUBJECT_API_URL}/${id}`);
+    }
+
+    updateItem(id, item) {
+        return axios.put(`${SUBJECT_API_URL}/${id}`, item);
+    }
+
+    createItem(item) {
+        return axios.post(`${SUBJECT_API_URL}`, item);
+    }
+
 }
 
 export default new ClassroomService()

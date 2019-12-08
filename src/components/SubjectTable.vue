@@ -18,7 +18,7 @@
 
 <script>
     import ItemRow from "@/components/ItemRow"
-    import SubjectService from "@/services/subjectService"
+    import ItemService from "@/services/subjectService"
 
     export default {
         name: "SubjectTable",
@@ -32,16 +32,19 @@
         },
         methods: {
             refreshList() {
-                SubjectService.retrieveAll()
+                ItemService.retrieveAll()
                     .then((response) => {
                         this.subjects = response.data;
                     });
             },
-            updateItem() {
-                console.log("updating")
+            updateItem(id) {
+                this.$router.push(`/subjects/${id}`)
             },
-            deleteItem() {
-                console.log("deleting")
+            deleteItem(id) {
+                ItemService.deleteItem(id)
+                    .then(() => {
+                        this.refreshList()
+                    })
             }
         },
         created() {
